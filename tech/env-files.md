@@ -81,6 +81,30 @@ The function receives the environment as a mapping (`Mapping[str, str]`), so tes
 reads each name with `env.get(NAME, default)`, converts to a number, and raises `SettingsError` for a value it
 cannot accept. `cli.py` catches that error, prints `configuration error: ...` to stderr and returns exit code 2.
 
+### The complete file `.env.example`, line by line
+
+`.env.example` lines 1 to 9:
+
+```ini
+# Where the documents live (the repository root by default).
+ADR_ROOT=.
+# Where `make report` writes report.md.
+REPORT_DIR=build
+# One page: the most non-blank lines and words a decision record may have.
+ADR_MAX_LINES=70
+ADR_MAX_WORDS=600
+# Records that must come with audience versions, a reaction log and (if present) a talk. Comma-separated numbers.
+ADR_REQUIRED_COMMUNICATION=7
+```
+
+> **In plain words.** A `.env` file is a list of `NAME=value` lines that become settings (environment variables) for the programs; a line starting with `#` is a comment.
+
+- `ADR_ROOT` is set to `.`. The author's comment: Where the documents live (the repository root by default).
+- `REPORT_DIR` is set to `build`. The author's comment: Where `make report` writes report.md.
+- `ADR_MAX_LINES` is set to `70`. The author's comment: One page: the most non-blank lines and words a decision record may have.
+- `ADR_MAX_WORDS` is set to `600`.
+- `ADR_REQUIRED_COMMUNICATION` is set to `7`. The author's comment: Records that must come with audience versions, a reaction log and (if present) a talk. Comma-separated numbers.
+
 ## Try it yourself
 
 ```bash
