@@ -132,6 +132,7 @@ templates/           the blank record.
 tests/
   unit/              domain, application (in-memory store), infrastructure, command line.
   integration/       one test per "Done when" line, over copies of the real documents.
+tech/                24 beginner notes, one per technology; start at tech/README.md.
 pyproject.toml       metadata and every tool's configuration.   requirements*.lock  hash-pinned dependencies.
 Makefile             the only commands a reader needs.          .github/workflows/ci.yml  the same checks on push.
 ```
