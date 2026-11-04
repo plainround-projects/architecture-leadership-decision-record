@@ -22,6 +22,8 @@ The rules are plain functions from a parsed document to a list of findings, so e
 
 ## Data flow
 
+Drawn versions of this figure and of the walk-through: [the architecture](docs/diagrams/architecture.svg) and [one run](docs/diagrams/flow.svg).
+
 ```mermaid
 flowchart LR
     ctx["The situation<br/>forces and numbers"] --> adr["ADR 0007<br/>options, decision, consequences"]

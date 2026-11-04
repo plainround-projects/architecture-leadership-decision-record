@@ -11,6 +11,24 @@ A decision record for one real choice (how an orders service announces paid orde
 
 The lesson says "nothing here is code; the deliverables are documents". Both halves are real here: the documents are the lesson's deliverables, and the toolkit is what turns each "Done when" line from a judgment into a check you can run, so the records cannot drift into advertising, straw men or one paragraph copied three times.
 
+## Architecture
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/diagrams/architecture-dark.svg">
+  <img alt="A decision record, ADR 0007, and its three audience versions, reaction log, talk and generated decision log sit in docs. The adr-toolkit command reads them through the DocumentStore, parses them, applies rules with ADR, AUD, REA, TLK and LOG codes and writes build/report.md." src="docs/diagrams/architecture.svg">
+</picture>
+
+Look at the two halves: the documents are the lesson's deliverables, and every Done-when line the toolkit can check becomes a rule with a code.
+
+## How one run flows
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/diagrams/flow-dark.svg">
+  <img alt="A make run lists and parses the records, applies the rules, compares the supersession links and the decision log, and prints the report; the amber rows are the error and the warning the lint can raise." src="docs/diagrams/flow.svg">
+</picture>
+
+Row 3x is an error that would fail the run, and row 5x is the REA004 warning the worked-example reaction log always prints.
+
 ## Prerequisites
 
 | Tool | Version | Used for |
